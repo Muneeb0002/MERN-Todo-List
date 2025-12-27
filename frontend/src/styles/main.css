@@ -1,0 +1,68 @@
+/* Buttons */
+.AddTodo-Btn,
+.EditBtn,
+.DeleteBtn,
+.SaveBtn,
+.CancelBtn {
+    padding: 8px 16px;
+    margin: 0px 5px 0px 10px;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+/* Button Colors */
+.AddTodo-Btn { background-color: green; }
+.EditBtn { background-color: orange; }
+.DeleteBtn { background-color: red; }
+.SaveBtn { background-color: green; }
+.CancelBtn { background-color: rgb(226, 226, 0); }
+
+/* Inputs */
+.AddTodoInput,
+.UpdateInput {
+    height: 45px;
+    width: 240px;
+    margin: 5px 5px 5px 33px;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border: none;
+    text-align: center;
+    font-size: 16px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+    /* Inputs */
+    .AddTodoInput,
+    .UpdateInput {
+        width: 90%;        /* flexible width */
+        margin: 10px auto; /* center horizontally */
+        font-size: 14px;
+    }
+
+    /* Buttons: full width, stacked, center */
+    .AddTodo-Btn,
+    .EditBtn,
+    .DeleteBtn,
+    .SaveBtn,
+    .CancelBtn {
+        width: 80%;        /* take most of screen */
+        display: block;    /* make each button occupy a line */
+        margin: 10px auto; /* center horizontally with spacing */
+        font-size: 14px;
+        padding: 10px 0;  /* taller for touch screens */
+    }
+
+    /* Optional: stack action buttons horizontally with small spacing */
+    /* Agar chaho buttons side by side on bigger screens but stack on mobile */
+    .button-group {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;  /* spacing between buttons */
+        margin-top: 10px;
+    }
+}
